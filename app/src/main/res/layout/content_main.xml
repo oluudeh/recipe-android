@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".activity.MainActivity"
+    tools:showIn="@layout/activity_main">
+    <RelativeLayout
+        android:paddingBottom="20dp"
+        android:layout_marginBottom="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button android:id="@+id/btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="OK"
+            android:gravity="center"
+            android:layout_alignParentBottom="true"
+            />
+        <TextView android:id="@+id/featuredTitle"
+            android:text="Featured Dishes"
+            android:padding="10dp"
+            android:textColor="@color/colorPrimaryDark"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_toStartOf="@+id/featuredMore"
+            android:layout_toLeftOf="@+id/featuredMore"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <TextView android:id="@+id/featuredMore"
+            android:text="More..."
+            android:padding="10dp"
+            android:textSize="15sp"
+            android:textColor="@color/colorAccent"
+            android:textStyle="bold"
+            android:layout_alignParentTop="true"
+            android:layout_width="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_height="wrap_content" />
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/featuredRecyclerView"
+            android:layoutAnimation="@anim/layout_animation_from_right"
+            android:layout_below="@+id/featuredTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <TextView android:id="@+id/categoriesTitle"
+            android:layout_below="@+id/featuredRecyclerView"
+            android:text="Categories"
+            android:padding="10dp"
+            android:textColor="@color/colorPrimaryDark"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/categoriesRecyclerView"
+            android:layoutAnimation="@anim/layout_animation_from_left"
+            android:layout_below="@+id/categoriesTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <RelativeLayout
+            android:layout_below="@+id/categoriesRecyclerView"
+            android:paddingBottom="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView android:id="@+id/popularTitle"
+                android:text="Popular Dishes"
+                android:padding="10dp"
+                android:textColor="@color/colorPrimaryDark"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_toStartOf="@+id/popularMore"
+                android:layout_toLeftOf="@+id/popularMore"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <TextView android:id="@+id/popularMore"
+                android:text="More..."
+                android:padding="10dp"
+                android:textSize="15sp"
+                android:textColor="@color/colorAccent"
+                android:textStyle="bold"
+                android:layout_alignParentTop="true"
+                android:layout_width="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_height="wrap_content" />
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/popularRecyclerView"
+                android:layout_below="@+id/popularTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </RelativeLayout>
+    </RelativeLayout>
+</android.support.v4.widget.NestedScrollView>

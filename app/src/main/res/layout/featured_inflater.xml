@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    android:layout_margin="@dimen/size_10"
+    android:layout_width="@dimen/size_240"
+    android:layout_height="@dimen/size_200"
+    tools:targetApi="LOLLIPOP"
+    android:elevation="@dimen/size_4"
+    app:cardCornerRadius="@dimen/size_10"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <ImageView android:id="@+id/image"
+        android:src="@drawable/s1"
+        android:scaleType="centerCrop"
+        android:background="#fff"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+    <LinearLayout android:orientation="vertical"
+        android:paddingBottom="@dimen/size_20"
+        android:gravity="bottom"
+        android:layout_gravity="bottom"
+        android:paddingTop="@dimen/size_6"
+        android:background="#333"
+        android:alpha="0.6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView android:id="@+id/title"
+            android:text="Egg Fry"
+            android:textAllCaps="true"
+            android:textColor="#fff"
+            android:textSize="@dimen/font_18"
+            android:textStyle="bold"
+            android:paddingStart="@dimen/size_16"
+            android:paddingEnd="@dimen/size_16"
+            android:alpha="2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <TextView android:id="@+id/details"
+            android:text="10mins | Dessert"
+            android:textColor="#fff"
+            android:paddingStart="@dimen/size_16"
+            android:paddingEnd="@dimen/size_16"
+            android:alpha="2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

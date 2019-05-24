@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="@dimen/size_12"
+    android:layout_margin="@dimen/size_8"
+    android:layout_width="@dimen/size_140"
+    android:layout_height="@dimen/size_150">
+    <ImageView android:id="@+id/image"
+        android:src="@drawable/featured_bg_1"
+        android:scaleType="centerCrop"
+        android:layout_alignParentTop="true"
+        android:background="#fff"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+    <TextView android:id="@+id/title"
+        android:text="Desserts"
+        android:padding="@dimen/size_20"
+        android:textSize="@dimen/font_16"
+        android:textStyle="bold"
+        android:textAllCaps="true"
+        android:textColor="#fff"
+        android:layout_gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</androidx.cardview.widget.CardView>

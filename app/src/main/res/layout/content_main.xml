@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v4.widget.NestedScrollView
+<androidx.core.widget.NestedScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -8,97 +8,88 @@
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context=".activity.MainActivity"
     tools:showIn="@layout/activity_main">
-    <RelativeLayout
-        android:paddingBottom="20dp"
-        android:layout_marginBottom="30dp"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:paddingTop="@dimen/size_30"
+        android:paddingBottom="@dimen/size_30"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-        <Button android:id="@+id/btn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="OK"
-            android:gravity="center"
-            android:layout_alignParentBottom="true"
-            />
         <TextView android:id="@+id/featuredTitle"
-            android:text="Featured Dishes"
-            android:padding="10dp"
+            android:text="@string/featured_dishes"
+            android:padding="@dimen/size_10"
             android:textColor="@color/colorPrimaryDark"
             android:textStyle="bold"
-            android:textSize="18sp"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_toStartOf="@+id/featuredMore"
-            android:layout_toLeftOf="@+id/featuredMore"
-            android:layout_width="match_parent"
+            android:textSize="@dimen/font_16"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/featuredMore"
+            android:layout_width="0dp"
             android:layout_height="wrap_content" />
         <TextView android:id="@+id/featuredMore"
-            android:text="More..."
-            android:padding="10dp"
-            android:textSize="15sp"
+            android:text="@string/more_ellipsis"
+            android:padding="@dimen/size_10"
+            android:textSize="@dimen/font_14"
             android:textColor="@color/colorAccent"
             android:textStyle="bold"
-            android:layout_alignParentTop="true"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
             android:layout_width="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
             android:layout_height="wrap_content" />
-        <android.support.v7.widget.RecyclerView
+        <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/featuredRecyclerView"
             android:layoutAnimation="@anim/layout_animation_from_right"
-            android:layout_below="@+id/featuredTitle"
+            app:layout_constraintTop_toBottomOf="@+id/featuredTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
         <TextView android:id="@+id/categoriesTitle"
-            android:layout_below="@+id/featuredRecyclerView"
-            android:text="Categories"
-            android:padding="10dp"
+            android:text="@string/categories"
+            android:padding="@dimen/size_10"
             android:textColor="@color/colorPrimaryDark"
             android:textStyle="bold"
-            android:textSize="18sp"
+            android:textSize="@dimen/font_16"
+            app:layout_constraintTop_toBottomOf="@+id/featuredRecyclerView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
-        <android.support.v7.widget.RecyclerView
+        <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/categoriesRecyclerView"
             android:layoutAnimation="@anim/layout_animation_from_left"
             android:layout_below="@+id/categoriesTitle"
+            app:layout_constraintTop_toBottomOf="@+id/categoriesTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
-        <RelativeLayout
-            android:layout_below="@+id/categoriesRecyclerView"
-            android:paddingBottom="30dp"
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            app:layout_constraintTop_toBottomOf="@+id/categoriesRecyclerView"
+            android:layout_marginBottom="@dimen/size_30"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <TextView android:id="@+id/popularTitle"
-                android:text="Popular Dishes"
-                android:padding="10dp"
+                android:text="@string/popular_dishes"
+                android:padding="@dimen/size_10"
                 android:textColor="@color/colorPrimaryDark"
                 android:textStyle="bold"
-                android:textSize="18sp"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:layout_toStartOf="@+id/popularMore"
-                android:layout_toLeftOf="@+id/popularMore"
-                android:layout_width="match_parent"
+                android:textSize="@dimen/font_16"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/popularMore"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content" />
             <TextView android:id="@+id/popularMore"
-                android:text="More..."
-                android:padding="10dp"
-                android:textSize="15sp"
+                android:text="@string/more_ellipsis"
+                android:padding="@dimen/size_10"
+                android:textSize="@dimen/font_14"
                 android:textColor="@color/colorAccent"
                 android:textStyle="bold"
-                android:layout_alignParentTop="true"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
                 android:layout_width="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentRight="true"
                 android:layout_height="wrap_content" />
-            <android.support.v7.widget.RecyclerView
+            <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/popularRecyclerView"
-                android:layout_below="@+id/popularTitle"
+                app:layout_constraintTop_toBottomOf="@+id/popularTitle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
 
-        </RelativeLayout>
-    </RelativeLayout>
-</android.support.v4.widget.NestedScrollView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">Recipe</string>
+    <string name="featured_dishes">Featured Dishes</string>
+    <string name="more_ellipsis">More…</string>
+    <string name="categories">Categories</string>
+    <string name="popular_dishes">Popular Dishes</string>
+    <string name="ingredients">Ingredients</string>
+    <string name="demo_ingredients">Pepper\nSalt\nMaggi\nTomatoes\nMeat\nCurry\nThyme</string>
+    <string name="breakfast">Breakfast</string>
+    <string name="dessert">Dessert</string>
+    <string name="african">African Dishes</string>
+    <string name="european">European Dishes</string>
+    <string name="asian">Asian Dishes</string>
 </resources>
